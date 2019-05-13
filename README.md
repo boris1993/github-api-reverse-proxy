@@ -1,4 +1,6 @@
 # GitHub API 反向代理
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fboris1993%2Fgithub-api-reverse-proxy.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fboris1993%2Fgithub-api-reverse-proxy?ref=badge_shield)
+
 
 一个基于[LeanCloud](https://leancloud.cn/)云引擎的GitHub API反向代理，用于解决GitHub域名没有备案的问题。
 
@@ -44,3 +46,7 @@ lean deploy
 ## 感谢
 
 本项目核心功能使用[mitre/HTTP-Proxy-Servlet](https://github.com/mitre/HTTP-Proxy-Servlet)实现
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fboris1993%2Fgithub-api-reverse-proxy.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fboris1993%2Fgithub-api-reverse-proxy?ref=badge_large)
