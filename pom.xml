@@ -18,7 +18,6 @@
     <log4j.version>2.13.3</log4j.version>
     <http.proxy.servlet.version>1.11</http.proxy.servlet.version>
     <servlet.api.version>3.1.0</servlet.api.version>
-    <jettyVersion>9.4.31.v20200723</jettyVersion>
   </properties>
 
   <dependencies>
@@ -62,7 +61,8 @@
         <activeByDefault>true</activeByDefault>
       </activation>
       <properties>
-        <lean-jetty.version>${jettyVersion}</lean-jetty.version>
+        <lean-jetty.version>9.4.31.v20200723</lean-jetty.version>
+        <asm.version>5.0.2</asm.version>
         <!--suppress UnresolvedMavenProperty -->
         <lean-jetty.port>${env.LEANCLOUD_APP_PORT}</lean-jetty.port>
       </properties>
@@ -72,6 +72,18 @@
             <groupId>org.eclipse.jetty</groupId>
             <artifactId>jetty-maven-plugin</artifactId>
             <version>${lean-jetty.version}</version>
+            <dependencies>
+              <dependency>
+                <groupId>org.ow2.asm</groupId>
+                <artifactId>asm</artifactId>
+                <version>${asm.version}</version>
+              </dependency>
+              <dependency>
+                <groupId>org.ow2.asm</groupId>
+                <artifactId>asm-commons</artifactId>
+                <version>${asm.version}</version>
+              </dependency>
+            </dependencies>
             <configuration>
               <webAppSourceDirectory>${project.basedir}/src/main/webapp</webAppSourceDirectory>
               <scanIntervalSeconds>3</scanIntervalSeconds>
